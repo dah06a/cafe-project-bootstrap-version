@@ -1,0 +1,21 @@
+{
+  "name": "cafe-project-bootstrap-version",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lite": "lite-server",
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
