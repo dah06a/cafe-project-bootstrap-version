@@ -100,10 +100,64 @@
                 </div>
             </div>
 
+            <!-- Home Page Information Pills -->
+            <div class="row my-4">
+                <div class="col text-center text-white homeInfo">
+                    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link active" id="pricing-pill" data-toggle="pill" href="#pricing-panel" role="tab" aria-controls="pricing-panel" aria-selected="true">Pricing</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="location-pill" data-toggle="pill" href="#location-panel" role="tab" aria-controls="location-panel" aria-selected="false">Location</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="rules-pill" data-toggle="pill" href="#rules-panel" role="tab" aria-controls="rules-panel" aria-selected="false">House Rules</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade border-primary show active" id="pricing-panel" role="tabpanel" aria-labelledby="pricing-pill">
+                            <h2 class="font-choice">Pricing</h2>
+                            <br class="d-none d-sm-block" />
+                            <h4>Great flex pricing available!  $10 to check out as many games as you want for as long as you stay.</h4>
+                            <br class="d-none d-sm-block" />
+                            <h5>Membership plans available as well!</h5>
+                        </div>
+                        <div class="tab-pane fade" id="location-panel" role="tabpanel" aria-labelledby="location-pill">
+                            <h2 class="font-choice">Location</h2>
+                            <br class="d-none d-sm-block" />
+                            <div class="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto">
+                                <img src="img/example-map.png" alt="Location Map" class="img-thumbnail" />
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="rules-panel" role="tabpanel" aria-labelledby="rules-pill">
+                            <h2 class="font-choice">House Rules</h2>
+                            <br class="d-none d-sm-block" />
+                            <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                                <ol class="text-left">
+                                    <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    <li> Vivamus vitae ex pharetra ipsum vehicula iaculis vel in sem.</li>
+                                    <li> Suspendisse sit amet purus sed augue lacinia dictum nec non purus.</li>
+                                    <li> Proin gravida eros at dui venenatis, eget porttitor lectus maximus.</li>
+                                    <li> In ut nisl ut elit accumsan sagittis ut sed risus.</li>
+                                </ol>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+
             <!-- Home Carousel -->
             <div class="row my-4">
                 <div class="col">
-                    <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+                    <div id="homeCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                        <ol class="carousel-indicators col-3 mx-auto bg-secondary">
+                            <li data-target="#homeCarousel" data-slide="0" class="active"></li>
+                            <li data-target="#homeCarousel" data-slide="1"></li>
+                            <li data-target="#homeCarousel" data-slide="2"></li>
+                            <li data-target="#homeCarousel" data-slide="3"></li>
+                            <li data-target="#homeCarousel" data-slide="4"></li>
+                        </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="img/catan.jpeg" class="d-block w-100" alt="Catan Board Game">
@@ -121,11 +175,11 @@
                                 <img src="img/trains.jpg" class="d-block w-100" alt="Ticket To Ride Board Game">
                             </div>
                             <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="carousel-control-prev-icon bg-secondary" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="carousel-control-next-icon bg-secondary" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
