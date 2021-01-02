@@ -18,11 +18,14 @@
 
     <body>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <nav class="navbar navbar-expand-md navbar-dark sticky-top">
             <div class="container">
-                <a class="navbar-brand mr-0 mr-md-5" href="#"><img src="img/logo-icon.png" alt="Logo Icon" height="50" width="50" /></a>
-                <h4 class="d-none d-sm-flex navbar-text mx-auto text-white font-choice">Tabletop Gaming Cafe</h4>
-                <h6 class="d-sm-none navbar-text text-white font-choice">Tabletop Cafe</h6>
+                <a class="navbar-brand" href="#">
+                    <h4 class="d-none d-sm-flex navbar-text font-choice">Tabletop Gaming Cafe<i class="fas fa-dice"></i></h4>
+                </a>
+                <a class="navbar-brand" href="#">
+                    <h6 class="d-sm-none navbar-text font-choice">Tabletop Gaming Cafe<i class="fas fa-dice"></i></h6>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,22 +41,24 @@
         </nav>
 
         <!-- Jumbotron Header Element -->
-        <header class="jumbotron jumbotron-fluid jumbotron-style">
+        <header>
             <div class="img"></div>
                 <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 text-center text-sm-left">
-                            <h2 class="font-choice">Start A Game!</h2>
-                            <p>A better place to play together</p>
-                            <a role="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#reserveModal">Reserve A Table</a>
-                        </div>
-                        <div class="col-sm-6 text-center text-sm-right mt-3 lead text-white">
-                            <strong>
-                                <p>Mon-Fri: 9am-9pm</p>
-                                <p>Sat-Sun: 11am-11pm</p>
-                                <p>1234 Boardwalk Ave.</p>
-                                <p>(555) 555 - 5555</p>
-                            </strong>
+                    <div class="jumbotron">
+                        <div class="row">
+                            <div class="col-sm-6 text-center text-sm-left">
+                                <h2 class="font-choice">Start A Game!</h2>
+                                <p>A better place to play together</p>
+                                <a role="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#reserveModal">Reserve A Table</a>
+                            </div>
+                            <div class="col-sm-6 text-center text-sm-right mt-3 lead text-white">
+                                <strong>
+                                    <p>Mon-Fri: 9am-9pm</p>
+                                    <p>Sat-Sun: 11am-11pm</p>
+                                    <p>1234 Boardwalk Ave.</p>
+                                    <p>(555) 555 - 5555</p>
+                                </strong>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,10 +183,12 @@
                       <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade border-primary show active" id="pricing-panel" role="tabpanel" aria-labelledby="pricing-pill">
                             <h2 class="font-choice">Pricing</h2>
-                            <br class="d-none d-sm-block" />
+                            <br />
                             <h4>Great flex pricing available!  $10 to check out as many games as you want for as long as you stay.</h4>
-                            <br class="d-none d-sm-block" />
+                            <br />
                             <h5>Membership plans available as well!</h5>
+                            <br />
+                            <h4>$</h4>
                         </div>
                         <div class="tab-pane fade" id="location-panel" role="tabpanel" aria-labelledby="location-pill">
                             <h2 class="font-choice">Location</h2>
