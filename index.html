@@ -18,49 +18,65 @@
 
     <body>
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <h4 class="d-none d-sm-flex navbar-text font-choice">Tabletop Gaming Cafe<i class="fas fa-dice"></i></h4>
-                </a>
-                <a class="navbar-brand" href="#">
-                    <h6 class="d-sm-none navbar-text font-choice">Tabletop Gaming Cafe<i class="fas fa-dice"></i></h6>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="navbar-nav ml-auto text-light">
-                        <li class="nav-item active"><a class="nav-link" href="/index.html"><i class="fas fa-dice-d20"></i> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fas fa-user-friends"></i> About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="games.html"><i class="fas fa-list-ul"></i> Games</a></li>
-                        <li class="nav-item"><a class="nav-link" href="menu.html"><i class="fas fa-compass"></i> Menu</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <!-- Jumbotron Header -->
+        <header>
+            <div class="jumbotron jumbotron-fluid py-0">
 
-        <!-- Jumbotron Header Element -->
-        <header class="my-4">
-            <div class="container">
-                <div class="jumbotron">
-                    <div class="row align-items-center">
-                        <div class="col-sm-6 text-center text-sm-left">
-                            <h2 class="font-choice">Start A Game!</h2>
-                            <p>A better place to play together</p>
-                            <a role="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#reserveModal">Reserve A Table</a>
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-md navbar-dark">
+                    <a class="navbar-brand" href="#"><i class="fas fa-chess-rook"></i>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                        <ul class="navbar-nav ml-auto text-light">
+                            <li class="nav-item active"><a class="nav-link" href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fas fa-user-friends"></i> About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="games.html"><i class="fas fa-dice"></i> Games</a></li>
+                            <li class="nav-item"><a class="nav-link" href="menu.html"><i class="fas fa-hamburger"></i> Food</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Header Container -->
+                <div class="container-fluid text-center font-choice" style="color: var(--theme-primary);">
+
+                    <div class="row h-75">
+
+                    </div>
+                    <div class="row my-2 my-sm-5" >
+                        <div class="col mx-auto" >
+                            <h1>Tabletop</h1>
                         </div>
-                        <div class="col-sm-6 text-center text-sm-right mt-3 lead text-white">
-                            <strong>
-                                <p>Mon-Fri: 9am-9pm</p>
-                                <p>Sat-Sun: 11am-11pm</p>
-                                <p>1234 Boardwalk Ave.</p>
-                                <p>(555) 555 - 5555</p>
-                            </strong>
+                    </div>
+                    <div class="row my-2 my-sm-5" >
+                        <div class="col mx-auto" >
+                            <h1>Gaming</h1>
+                        </div>
+                    </div>
+                    <div class="row my-2 my-sm-5" >
+                        <div class="col mx-auto" >
+                            <h1>Cafe</h1>
+                        </div>
+                    </div>
+                    <div class="row my-2 my-sm-5">
+                        <div class="col col-sm-10 mx-auto">
+                            <p style="color: var(--theme-white);">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <div class="row my-2 my-sm-5">
+                        <div class="col">
+                            <a role="button" class="btn btn-lg" data-toggle="modal" data-target="#reserveModal">Reserve A Table</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h4><i class="fas fa-arrow-circle-down scroll"></i></h4>
                         </div>
                     </div>
                 </div>
+
             </div>
         </header>
 
@@ -133,11 +149,11 @@
                 <div class="col">
                     <div id="homeCarousel" class="carousel slide carousel-fade" data-ride="carousel">
                         <ol class="carousel-indicators col-3 mx-auto bg-secondary">
-                            <li data-target="#homeCarousel" data-slide="0" class="active"></li>
-                            <li data-target="#homeCarousel" data-slide="1"></li>
-                            <li data-target="#homeCarousel" data-slide="2"></li>
-                            <li data-target="#homeCarousel" data-slide="3"></li>
-                            <li data-target="#homeCarousel" data-slide="4"></li>
+                            <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#homeCarousel" data-slide-to="1"></li>
+                            <li data-target="#homeCarousel" data-slide-to="2"></li>
+                            <li data-target="#homeCarousel" data-slide-to="3"></li>
+                            <li data-target="#homeCarousel" data-slide-to="4"></li>
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -165,6 +181,53 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Home Page Information Pills -->
+            <div class="row my-4">
+                <div class="col text-center text-white homeInfo">
+                    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link active" id="pricing-pill" data-toggle="pill" href="#pricing-panel" role="tab" aria-controls="pricing-panel" aria-selected="true">Pricing</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="location-pill" data-toggle="pill" href="#location-panel" role="tab" aria-controls="location-panel" aria-selected="false">Location</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="rules-pill" data-toggle="pill" href="#rules-panel" role="tab" aria-controls="rules-panel" aria-selected="false">House Rules</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade border-primary show active" id="pricing-panel" role="tabpanel" aria-labelledby="pricing-pill">
+                            <h2 class="font-choice">Pricing</h2>
+                            <br />
+                            <h4>Great flex pricing available!  $10 to check out as many games as you want for as long as you stay.</h4>
+                            <br />
+                            <h5>Membership plans available as well!</h5>
+                            <br />
+                        </div>
+                        <div class="tab-pane fade" id="location-panel" role="tabpanel" aria-labelledby="location-pill">
+                            <h2 class="font-choice">Location</h2>
+                            <br class="d-none d-sm-block" />
+                            <div class="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto">
+                                <img src="img/example-map.png" alt="Location Map" class="img-thumbnail" />
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="rules-panel" role="tabpanel" aria-labelledby="rules-pill">
+                            <h2 class="font-choice">House Rules</h2>
+                            <br class="d-none d-sm-block" />
+                            <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                                <ol class="text-left">
+                                    <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    <li> Vivamus vitae ex pharetra ipsum vehicula iaculis vel in sem.</li>
+                                    <li> Suspendisse sit amet purus sed augue lacinia dictum nec non purus.</li>
+                                    <li> Proin gravida eros at dui venenatis, eget porttitor lectus maximus.</li>
+                                    <li> In ut nisl ut elit accumsan sagittis ut sed risus.</li>
+                                </ol>
+                            </div>
+                        </div>
+                      </div>
                 </div>
             </div>
 
@@ -204,55 +267,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Home Page Information Pills -->
-            <div class="row my-4">
-                <div class="col text-center text-white homeInfo">
-                    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link active" id="pricing-pill" data-toggle="pill" href="#pricing-panel" role="tab" aria-controls="pricing-panel" aria-selected="true">Pricing</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="location-pill" data-toggle="pill" href="#location-panel" role="tab" aria-controls="location-panel" aria-selected="false">Location</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="rules-pill" data-toggle="pill" href="#rules-panel" role="tab" aria-controls="rules-panel" aria-selected="false">House Rules</a>
-                        </li>
-                      </ul>
-                      <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade border-primary show active" id="pricing-panel" role="tabpanel" aria-labelledby="pricing-pill">
-                            <h2 class="font-choice">Pricing</h2>
-                            <br />
-                            <h4>Great flex pricing available!  $10 to check out as many games as you want for as long as you stay.</h4>
-                            <br />
-                            <h5>Membership plans available as well!</h5>
-                            <br />
-                            <h4>$</h4>
-                        </div>
-                        <div class="tab-pane fade" id="location-panel" role="tabpanel" aria-labelledby="location-pill">
-                            <h2 class="font-choice">Location</h2>
-                            <br class="d-none d-sm-block" />
-                            <div class="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto">
-                                <img src="img/example-map.png" alt="Location Map" class="img-thumbnail" />
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="rules-panel" role="tabpanel" aria-labelledby="rules-pill">
-                            <h2 class="font-choice">House Rules</h2>
-                            <br class="d-none d-sm-block" />
-                            <div class="col-12 col-md-10 col-lg-8 mx-auto">
-                                <ol class="text-left">
-                                    <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                    <li> Vivamus vitae ex pharetra ipsum vehicula iaculis vel in sem.</li>
-                                    <li> Suspendisse sit amet purus sed augue lacinia dictum nec non purus.</li>
-                                    <li> Proin gravida eros at dui venenatis, eget porttitor lectus maximus.</li>
-                                    <li> In ut nisl ut elit accumsan sagittis ut sed risus.</li>
-                                </ol>
-                            </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-
 
             <!-- Footer -->
             <footer class="site-footer bg-dark font-choice">
