@@ -36,19 +36,18 @@ body {
     font-family: 'Langar', cursive;
 }
 
-.jumbotron{
-    background: url("/img/dark-hex-background.jpg");
+.landing {
+    background-image: url("/img/dark-hex-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color:white !important;
-    margin-top: 0;
     height:100vh;
 }
 
 .navbar-dark {
     background-color: transparent;
-    height: 50px;
+    height: 40px;
+    width: 100%;
     margin: 0;
 }
 
@@ -88,7 +87,7 @@ body {
 .tab-content {
     border:4px solid #0275d8;
     padding: 10px;
-  }
+}
 
 @media only screen and (max-width: 600px) {
     .card-img-top {
@@ -97,6 +96,10 @@ body {
 
     .tab-content {
         height: 80vh;
+    }
+
+    .title {
+        justify-content: end;
     }
 }
 

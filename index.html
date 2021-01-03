@@ -18,67 +18,64 @@
 
     <body>
 
-        <!-- Jumbotron Header -->
-        <header>
-            <div class="jumbotron jumbotron-fluid py-0">
+        <div class="container-fluid landing">
+
+            <!-- Header Top Section -->
+            <div class="row h-75">
 
                 <!-- Navbar -->
                 <nav class="navbar navbar-expand-md navbar-dark">
-                    <a class="navbar-brand" href="#"><i class="fas fa-chess-rook"></i>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <div class="collapse navbar-collapse" id="mainNavbar">
-                        <ul class="navbar-nav ml-auto text-light">
-                            <li class="nav-item active"><a class="nav-link" href="/index.html"><i class="fas fa-home"></i> Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fas fa-user-friends"></i> About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="games.html"><i class="fas fa-dice"></i> Games</a></li>
-                            <li class="nav-item"><a class="nav-link" href="menu.html"><i class="fas fa-hamburger"></i> Food</a></li>
-                        </ul>
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><i class="fas fa-chess-rook"></i></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="mainNavbar">
+                            <ul class="navbar-nav ml-auto text-light">
+                                <li class="nav-item active"><a class="nav-link" href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fas fa-user-friends"></i> About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="games.html"><i class="fas fa-dice"></i> Games</a></li>
+                                <li class="nav-item"><a class="nav-link" href="menu.html"><i class="fas fa-hamburger"></i> Food</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
 
-                <!-- Header Container -->
-                <div class="container-fluid text-center font-choice" style="color: var(--theme-primary);">
-
-                    <div class="row h-75">
-
-                    </div>
-                    <div class="row my-2 my-sm-5" >
-                        <div class="col mx-auto" >
+                <!-- Main Title Area -->
+                <div class="container-fluid h-100">
+                    <div class="row my-2 my-md-5 font-choice text-right text-md-center" style="color: var(--theme-primary)">
+                        <div class="col-12 my-2 my-md-3" >
                             <h1>Tabletop</h1>
                         </div>
-                    </div>
-                    <div class="row my-2 my-sm-5" >
-                        <div class="col mx-auto" >
+                        <div class="col-12 my-2 my-md-3" >
                             <h1>Gaming</h1>
                         </div>
-                    </div>
-                    <div class="row my-2 my-sm-5" >
-                        <div class="col mx-auto" >
+                        <div class="col-12 my-2 my-md-3" >
                             <h1>Cafe</h1>
                         </div>
                     </div>
-                    <div class="row my-2 my-sm-5">
-                        <div class="col col-sm-10 mx-auto">
-                            <p style="color: var(--theme-white);">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <!-- Home Message & Reserve Button-->
+                    <div class="row my-2 my-sm-3 text-center">
+                        <div class="col col-sm-8 mx-auto">
+                            <p style="color: var(--theme-white);">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                     </div>
-                    <div class="row my-2 my-sm-5">
+                    <div class="row my-2 my-sm-3 text-center">
                         <div class="col">
                             <a role="button" class="btn btn-lg" data-toggle="modal" data-target="#reserveModal">Reserve A Table</a>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <h4><i class="fas fa-arrow-circle-down scroll"></i></h4>
-                        </div>
-                    </div>
                 </div>
-
             </div>
-        </header>
+
+            <!-- Landing Bottom Row With Animated Icon -->
+            <div class="row h-25 text-center">
+                <div class="col align-self-center">
+                    <h4 class=""><i class="fas fa-arrow-circle-down scroll"></i></h4>
+                </div>
+            </div>
+        </div>
 
         <!-- Reserve Modal -->
         <div id="reserveModal" class="modal fade" role="dialog">
