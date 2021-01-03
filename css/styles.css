@@ -5,6 +5,10 @@
     --tan-dark-theme: #fcdab7;
 }
 
+.btn {
+    background-color: var(--secondary-dark-theme);
+}
+
 body {
     background-color: var(--primary-dark-theme);
 }
