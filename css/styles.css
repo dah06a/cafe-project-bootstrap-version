@@ -7,14 +7,14 @@
     --theme-secondary: #45A29E;
 }
 
-.btn {
+.btn-landing {
     background-color: var(--theme-black);
     outline: 3px solid var(--theme-light);
     color: white;
     border-radius: 0;
 }
 
-.btn:hover {
+.btn-landing:hover {
     background-color: var(--theme-primary);
 }
 
