@@ -19,7 +19,7 @@
 }
 
 body {
-    background-color: var(--primary-dark-theme);
+    background-color: var(--theme-black);
 }
 
 .card-img-top {
@@ -29,19 +29,31 @@ body {
 }
 
 .carousel-item {
-    height: 30vw;
+    height: 200px;
 }
 
 .font-choice {
     font-family: 'Langar', cursive;
 }
 
+.info-area {
+    background-image: url("/img/dark-quads-background.jpg");
+    height:100vh;
+    margin: 0;
+}
+
 .landing {
     background-image: url("/img/dark-hex-background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     height:100vh;
+    margin: 0;
+}
+
+.nav-pills > .nav-item > a {
+    color: var(--theme-secondary);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: var(--theme-secondary);
 }
 
 .navbar-dark {
@@ -63,39 +75,34 @@ body {
     color: var(--theme-secondary) !important;
 }
 
-.nav-item > a:hover {
-    color: var(--theme-primary) !important;
-}
-
 .navbar-toggler {
     background-color: var(--theme-secondary) !important;
     color: var(--theme-black) !important;
 }
 
+p {
+    color: var(--theme-white);
+}
+
 .parallax {
-    min-height: 50vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .scroll {
     animation: updown 2s ease infinite;
 }
 
-.tab-content {
-    border:4px solid #0275d8;
-    padding: 10px;
+.cafe-area {
+    background-image: url("/img/full-tables.jpg");
+    height:100vh;
+    margin: 0;
 }
 
 @media only screen and (max-width: 600px) {
     .card-img-top {
         height: 20vh;
-    }
-
-    .tab-content {
-        height: 80vh;
     }
 
     .title {
