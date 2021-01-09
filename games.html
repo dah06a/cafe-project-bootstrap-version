@@ -15,24 +15,50 @@
     </head>
 
     <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-            <div class="container">
-                <a class="navbar-brand mr-0 mr-md-5" href="/index.html"><img src="img/logo-icon.png" alt="Logo Icon" height="50" width="50" /></a>
-                <h4 class="d-none d-sm-flex navbar-text mx-auto text-white font-choice">Tabletop Gaming Cafe</h4>
-                <h6 class="d-sm-none navbar-text text-white font-choice">Tabletop Cafe</h6>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="navbar-nav ml-auto text-light">
-                        <li class="nav-item"><a class="nav-link" href="/index.html"><i class="fas fa-dice-d20"></i> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/aboutus.html"><i class="fas fa-user-friends"></i> About Us</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="#"><i class="fas fa-list-ul"></i> Games</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/menu.html"><i class="fas fa-compass"></i> Menu</a></li>
-                    </ul>
+        <!-- Games Landing Header-->
+        <div class="container-fluid top-container">
+            <div class="row top-heading parallax h-25">
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+
+                    <a class="navbar-brand" href="index.html"><i class="fas fa-chess-rook"></i></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent">
+                        <span><i class="fas fa-bars"></i></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse text-center" id="navContent">
+                        <ul class="navbar-nav ml-auto text-light">
+                            <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fas fa-user-friends"></i> About</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="#"><i class="fas fa-dice"></i> Games</a></li>
+                            <li class="nav-item"><a class="nav-link" href="menu.html"><i class="fas fa-hamburger"></i> Food</a></li>
+                        </ul>
+                    </div>
+
+                </nav>
+
+                <!-- About Title -->
+                <div class="col-12 my-5 font-choice text-center" style="color: var(--theme-primary)">
+                    <h1>Games</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+            </div>
+
+            <!-- Game Landing -->
+            <div class="row game-landing h-75"></div>
+        </div>
+
+        <!-- About Story -->
+        <div class="container-fluid parallax text-center theme-back">
+            <div class="row py-3">
+                <div class="col font-choice">
+                    <h2 style="color: var(--theme-primary);">Games List</h2>
                 </div>
             </div>
-        </nav>
+
+        </div>
+
     </body>
 </html>

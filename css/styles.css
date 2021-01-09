@@ -7,6 +7,31 @@
     --theme-secondary: #45A29E;
 }
 
+.top-container {
+    padding: 0;
+    height: 100vh;
+}
+
+.top-heading {
+    background-image: url("/img/dark-quads-background.jpg");
+    margin: 0;
+}
+
+.about-landing {
+    background-image: url("/img/show-off-games.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    opacity: 0.3;
+    margin: 0;
+}
+
+.about-pic {
+    background-image: url("/img/risk.jpeg");
+    height: 100vh;
+    margin: 0;
+}
+
 .board-game-area {
     background-image: url("/img/classic-pieces.jpg");
     opacity: 0.3;
@@ -72,21 +97,53 @@ body {
 
 .foot-info > ul {
     list-style-type: none;
+    color: var(--theme-light)
 }
 
 .font-choice {
     font-family: 'Langar', cursive;
 }
 
-.info-area {
-    background-image: url("/img/dark-quads-background.jpg");
+.game-landing {
+    background-image: url("/img/catan.jpeg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    opacity: 0.3;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.menu-bar {
+    background-image: url("/img/bar\ drinks.jpg");
+    opacity: 0.3;
     height:100vh;
     margin: 0;
 }
 
-.landing {
-    background-image: url("/img/dark-quads-background.jpg");
+.menu-cafe {
+    background-image: url("/img/coffee-and-cream.jpg");
+    opacity: 0.3;
     height:100vh;
+    margin: 0;
+}
+
+.menu-food {
+    background-image: url("/img/burger-fries-beer.jpg");
+    opacity: 0.3;
+    height:100vh;
+    margin: 0;
+}
+
+.menu-landing {
+    background-image: url("/img/empty-bar.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    opacity: 0.3;
     margin: 0;
 }
 
@@ -140,14 +197,22 @@ p {
     animation: updown 2s ease infinite;
 }
 
-@media only screen and (max-width: 600px) {
+.theme-back {
+    background-image: url("/img/dark-quads-background.jpg");
+    height: 100vh;
+    margin: 0;
+    color: var(--theme-light)
+}
+
+@media only screen and (max-width: 760px) {
     .card-img-top {
         height: 20vh;
     }
 
-    .title {
-        justify-content: end;
+    .collapse {
+        background-color: var(--theme-dark);
     }
+
 }
 
 @keyframes updown {

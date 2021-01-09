@@ -80,30 +80,32 @@
         </div>
 
         <!-- Main Landing Header-->
-        <div class="container-fluid landing parallax">
+        <div class="container-fluid theme-back parallax">
             <div class="row h-75">
 
                 <!-- Navbar -->
-                <nav class="navbar navbar-expand-md navbar-dark">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><i class="fas fa-chess-rook"></i></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                        <div class="collapse navbar-collapse" id="mainNavbar">
-                            <ul class="navbar-nav ml-auto text-light">
-                                <li class="nav-item active"><a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fas fa-user-friends"></i> About</a></li>
-                                <li class="nav-item"><a class="nav-link" href="games.html"><i class="fas fa-dice"></i> Games</a></li>
-                                <li class="nav-item"><a class="nav-link" href="menu.html"><i class="fas fa-hamburger"></i> Food</a></li>
-                            </ul>
-                        </div>
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+
+                    <a class="navbar-brand" href="#"><i class="fas fa-chess-rook"></i></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent">
+                        <span><i class="fas fa-bars"></i></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse text-center" id="navContent">
+                        <ul class="navbar-nav ml-auto text-light">
+                            <li class="nav-item active"><a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fas fa-user-friends"></i> About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="games.html"><i class="fas fa-dice"></i> Games</a></li>
+                            <li class="nav-item"><a class="nav-link" href="menu.html"><i class="fas fa-hamburger"></i> Food</a></li>
+                        </ul>
                     </div>
+
                 </nav>
+
 
                 <!-- Main Title Area -->
                 <div class="container-fluid h-100">
-                    <div class="row my-2 my-md-5 font-choice text-right text-md-center" style="color: var(--theme-primary)">
+                    <div class="row my-5 my-md-5 font-choice text-center" style="color: var(--theme-primary)">
                         <div class="col-12 my-2 my-md-3" >
                             <h1>Tabletop</h1>
                         </div>
@@ -132,7 +134,7 @@
             <!-- Landing Bottom Row With Animated Icon -->
             <div class="row h-25 text-center">
                 <div class="col align-self-center">
-                    <h4 class=""><i class="fas fa-arrow-circle-down scroll"></i></h4>
+                    <h3><a href="#info"><i class="fas fa-arrow-circle-down scroll"></i></a></h3>
                 </div>
             </div>
         </div>
@@ -141,8 +143,8 @@
         <div class="container-fluid cafe-area parallax"></div>
 
         <!-- Info Area -->
-        <div class="container-fluid landing parallax">
-            <div class="row text-center">
+        <div class="container-fluid theme-back parallax" id="info">
+            <div class="row text-center h-75">
                 <div class="col-12 mx-auto my-5">
                     <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation" >
@@ -192,15 +194,21 @@
                 </div>
             </div>
 
+            <div class="row h-25 text-center">
+                <div class="col align-self-center">
+                    <h3><a href="#cards"><i class="fas fa-arrow-circle-down scroll"></i></a></h3>
+                </div>
+            </div>
+
         </div>
 
         <!-- Board Game Image Area -->
         <div class="container-fluid board-game-area parallax"></div>
 
         <!-- Card Area -->
-        <div class="container-fluid landing parallax">
+        <div class="container-fluid home-landing parallax" id="cards">
             <div class="row py-4 px-3 h-100">
-                <div class="col-sm-4 align-self-md-start">
+                <div class="col-md-4 align-self-md-start">
                     <div class="card my-2">
                         <img src="img/two-players.jpg" class="card-img-top" alt="Full Tables Photo">
                         <div class="card-body d-none d-md-block">
@@ -211,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 align-self-md-center">
+                <div class="col-md-4 align-self-md-center">
                     <div class="card my-2">
                         <img src="img/game-library-3.jpg" class="card-img-top" alt="Full Tables Photo">
                         <div class="card-body d-none d-md-block">
@@ -222,7 +230,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 align-self-md-end">
+                <div class="col-md-4 align-self-md-end">
                     <div class="card my-2">
                         <img src="img/five-plates" class="card-img-top" alt="Game Library">
                         <div class="card-body d-none d-md-block">
@@ -251,7 +259,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6 text-center align-self-md-center foot-info foot-icons">
-                        <ul class="d-flex" style="justify-content: space-around;">
+                        <ul class="d-flex p-0" style="justify-content: space-around;">
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
                             <li><a href="#"><i class="fab fa-yelp"></i></a></li>
