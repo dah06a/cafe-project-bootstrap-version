@@ -15,6 +15,7 @@ let gameOver = true;
 let gameSpeed = 3; //How far snake moves each frame - To change, be sure to match with resetGame()
 let gameSize = 10; //Determines size of snake and apples on screen
 let drawSpeed = 30; //Draw function interval speed - lower number = faster
+let score = 0;
 let apples = [];
 const w = canvas.width;
 const h = canvas.height;
@@ -22,9 +23,12 @@ const h = canvas.height;
 //HTML Variables
 const gameOverBtn = document.getElementById("gameOverBtn");
 gameOverBtn.addEventListener("click", resetGame);
+const scoreTitle = document.getElementById("scoreTitle");
+scoreTitle.style.display = "none";
 function resetGame() {
     gameOver = false;
     gameSpeed = 3;
+    score = 0;
     snake.headX = w/2;
     snake.headY = h/2;
     snake.bodX = [];
@@ -59,6 +63,7 @@ $(document).on("keyup", onKeyUp);
 $(function() {
     if (canvas.getContext) {
         ctx = canvas.getContext("2d");
+        ctx.textAlign = "center";
         setInterval("draw()", drawSpeed);
     } else {
         console.log("Error:  Canvas unsupported, cannot get context.")
@@ -66,12 +71,8 @@ $(function() {
 });
 
 //Helper Functions For Random Canvas Position
-function randomX() {
-    return Math.floor(Math.random()*(w-10)) + 10;
-}
-function randomY() {
-    return Math.floor(Math.random()*(h-10)) + 10;
-}
+const randomX = () => Math.floor(Math.random()*(w-10)) + 10;
+const randomY = () => Math.floor(Math.random()*(h-10)) + 10;
 
 //Apple Constructor Function
 function Apple(posX, posY) {
@@ -178,6 +179,7 @@ Snake.prototype.checkCollisions = function() {
             apples[i].posY = randomY();
             this.bodLen += gameSize*2;
             gameSpeed += (gameSpeed/30);
+            score += 1000;
         }
     }
 }
@@ -188,6 +190,12 @@ let snake = new Snake(w/2, h/2);
 //Game Over Function
 function showGameOver() {
     ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = "white";
+    ctx.font = "48px sans-serif";
+    ctx.fillText("Game Over", w/2, h/2);
+    ctx.font = "30px serif";
+    ctx.fillText("Score: " + score.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","), w/2, h/1.5);
+    scoreTitle.style.display = "none";
     gameOverBtn.style.display = "inline-block";
     console.log("Game Stopped");
 }
@@ -199,6 +207,9 @@ function playGame() {
     snake.display();
     snake.update();
     snake.checkCollisions();
+    score++;
+    scoreTitle.style.display = "inline-block";
+    scoreTitle.textContent = "Score: " + score.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     console.log("Game Running");
 }
 
