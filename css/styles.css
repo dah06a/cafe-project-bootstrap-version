@@ -69,7 +69,7 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-
+    z-index: 2;
 }
 
 .card-body {
@@ -118,6 +118,10 @@ body {
 #gameCarousel img {
     height: 100%;
     width:  80%;
+}
+
+#gameOverBtn {
+    width: 50%;
 }
 
 html {

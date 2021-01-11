@@ -11,29 +11,30 @@ let leftKey = false;
 let rightKey = false;
 
 //Game Global Variables
-let gameOver = false;
-let gameSpeed = 1; //How far snake moves each frame
-let gameSize = 8; //Determines size of snake and apples on screen
-let drawSpeed = 10; //Draw function interval speed - lower number = faster
+let gameOver = true;
+let gameSpeed = 3; //How far snake moves each frame - To change, be sure to match with resetGame()
+let gameSize = 10; //Determines size of snake and apples on screen
+let drawSpeed = 30; //Draw function interval speed - lower number = faster
 let apples = [];
 const w = canvas.width;
 const h = canvas.height;
 
 //HTML Variables
-const gameOverTitle = document.getElementById("gameOverTitle");
 const gameOverBtn = document.getElementById("gameOverBtn");
 gameOverBtn.addEventListener("click", resetGame);
 function resetGame() {
     gameOver = false;
+    gameSpeed = 3;
     snake.headX = w/2;
     snake.headY = h/2;
     snake.bodX = [];
     snake.bodY = [];
-    snake.bodLen = 200;
+    snake.bodLen = gameSize*10;
     snake.goingUp = false;
     snake.goingDown = false;
     snake.goingLeft = false;
     snake.goingRight = true;
+    gameOverBtn.style.display = "none";
 }
 
 //Document Event Functions Listening For Key Press
@@ -54,19 +55,17 @@ function onKeyUp(e) {
 $(document).on("keydown", onKeyDown);
 $(document).on("keyup", onKeyUp);
 
-//Main JQuery Function After Document Ready
+//Main Document Ready JQuery Function - Accesses Draw Function With Interval To Animate
 $(function() {
     if (canvas.getContext) {
         ctx = canvas.getContext("2d");
-        gameOverTitle.style.display = "none";
-        gameOverBtn.style.display = "none";
         setInterval("draw()", drawSpeed);
     } else {
         console.log("Error:  Canvas unsupported, cannot get context.")
     }
 });
 
-//Random Canvas Position Helper Functions
+//Helper Functions For Random Canvas Position
 function randomX() {
     return Math.floor(Math.random()*(w-10)) + 10;
 }
@@ -101,7 +100,7 @@ function Snake(headX, headY) {
     this.headY = headY;
     this.bodX = [];
     this.bodY = [];
-    this.bodLen = 200;
+    this.bodLen = gameSize*10;
     this.bodSize = gameSize;
     this.color = "rgb(25, 100, 25)";
     this.goingUp = false;
@@ -167,37 +166,44 @@ Snake.prototype.checkCollisions = function() {
     //Check for walls/border of canvas
     if (this.headY <= this.bodSize || this.headY >= h-this.bodSize || this.headX <= this.bodSize || this.headX >= w-this.bodSize) gameOver = true;
 
-    //Check for collisions with snake body
-    for (let i = this.bodSize; i < this.bodX.length; i++) {
-        if (this.goingUp && this.headX === this.bodX[i] && this.headY-this.bodSize === this.bodY[i]) gameOver = true;
-        if (this.goingDown && this.headX === this.bodX[i] && this.headY+this.bodSize === this.bodY[i]) gameOver = true;
-        if (this.goingLeft && this.headY === this.bodY[i] && this.headX-this.bodSize === this.bodX[i]) gameOver = true;
-        if (this.goingRight && this.headY === this.bodY[i] && this.headX+this.bodSize === this.bodX[i]) gameOver = true;
+    //Check for collisions with snake body starting from "neck" all the way until end of tail
+    for (let i = this.bodX.length-(this.bodSize*2); i > 0; i--) {
+        if (Math.abs(this.headX - this.bodX[i]) < this.bodSize && Math.abs(this.headY - this.bodY[i]) < this.bodSize) gameOver = true;
     }
 
-    //Check for apple collisions
+    //Check for apple collisions - increase snake length and game speed
     for (let i = 0; i < apples.length; i++) {
         if (Math.abs(this.headX - apples[i].posX) < this.bodSize && Math.abs(this.headY - apples[i].posY) < this.bodSize) {
             apples[i].posX = randomX();
             apples[i].posY = randomY();
-            this.bodLen += 100;
+            this.bodLen += gameSize*2;
+            gameSpeed += (gameSpeed/30);
         }
     }
 }
 
+//Create Instance Of Snake
 let snake = new Snake(w/2, h/2);
 
+//Game Over Function
+function showGameOver() {
+    ctx.clearRect(0, 0, w, h);
+    gameOverBtn.style.display = "inline-block";
+    console.log("Game Stopped");
+}
+
+//Play Game Function
+function playGame() {
+    ctx.clearRect(0, 0, w, h);
+    for (let i = 0; i < apples.length; i++) apples[i].display();
+    snake.display();
+    snake.update();
+    snake.checkCollisions();
+    console.log("Game Running");
+}
+
+//Draw Function For Animating Game
 function draw() {
-    if (gameOver) {
-        ctx.fillStyle = "black";
-        ctx.fillRect(0, 0, w, h);
-        gameOverTitle.style.display = "inline-block";
-        gameOverBtn.style.display = "inline-block";
-    } else {
-        ctx.clearRect(0, 0, w, h);
-        for (let i = 0; i < apples.length; i++) apples[i].display();
-        snake.display();
-        snake.update();
-        snake.checkCollisions();
-    }
+    if (gameOver) showGameOver();
+    else playGame();
 }
